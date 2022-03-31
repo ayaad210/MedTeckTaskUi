@@ -1,0 +1,10 @@
+.img-coll {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 0px;
+  width: fit-content;
+}
+
+.input-error {
+  border: red 1px solid;
+}

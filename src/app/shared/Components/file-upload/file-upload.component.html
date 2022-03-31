@@ -1,0 +1,21 @@
+<label class="image-upload-container btn btn-bwm">
+    <input #imageInput
+           type="file"
+           accept="image/*"
+           (change)="getfiles(imageInput)">
+  </label>
+  
+  <img [src]="FileUrl" width="300px" class="rounded ">
+
+  <div *ngIf="FileModel" class="img-preview-container">
+  
+    <!-- <div    [ngStyle]="{'background-image': 'url('+ FileModel.src + ')'}}">
+    </div> -->
+  
+    <div *ngIf="FileModel.pending" class="img-loading-overlay">
+      <div class="img-spinning-circle"></div>
+    </div>
+
+    <div *ngIf="FileModel.status === 'ok'" class="alert alert-success"> Image Uploaded Succesfuly!</div>
+    <div *ngIf="FileModel.status === 'fail'" class="alert alert-danger"> Image Upload Failed!</div>
+  </div>

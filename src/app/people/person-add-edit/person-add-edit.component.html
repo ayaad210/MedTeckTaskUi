@@ -1,0 +1,146 @@
+<h2 class="text-center main-text">
+  {{ !!Model.id ? "Update Person" : "Add New Person" }}
+</h2>
+<form [formGroup]="PersonForm" (ngSubmit)="Save()">
+  <div class="center-Content row" style="padding: 10%">
+    <div class="col-lg-8">
+      <h3 class="text-muted text-center">Fill in Form</h3>
+
+      <div class="form-group p-1" style="width: 100%">
+        <div class="row center-Content">
+          <div class="col-sm-10">
+            <label class="col-form-label"> Name</label>
+            <input
+              required
+              required
+              class="form-control"
+              type="text"
+              ngModel
+              name="name"
+              formControlName="name"
+              [ngClass]="!!(
+              PersonForm.controls.name.invalid &&
+              !PersonForm.controls.name.untouched
+              )
+              ? 'input-error'
+              : ''"
+              />
+          </div>
+          <div class="col-sm-10">
+            <label class="col-form-label"> Email</label>
+
+            <input
+              required
+              class="form-control"
+              type="text"
+              name="Email"
+              formControlName="email"
+              [ngClass]="!!(
+                PersonForm.controls.email.invalid &&
+                !PersonForm.controls.email.untouched
+                )
+                ? 'input-error'
+                : ''"
+              />
+          </div>
+          <div class="col-sm-10">
+            <label class="col-form-label"> Country</label>
+            <!-- <input
+              required
+              class="form-control"
+              type="text"
+              name="country"
+              formControlName="country"
+              [ngClass]="!!(
+                PersonForm.controls.country.invalid &&
+                !PersonForm.controls.country.untouched
+                )
+                ? 'input-error'
+                : ''"
+              /> -->
+
+              <select   required
+              class="form-control"
+              type="text"
+              name="country"
+              formControlName="country"
+              [ngClass]="!!(
+                PersonForm.controls.country.invalid &&
+                !PersonForm.controls.country.untouched
+                )
+                ? 'input-error'
+                : ''"
+
+              >
+              <option value="">Sellect Country</option>
+              <option value="Egypt">Egypt</option>
+              <option value="USA">USA</option>
+
+              </select>
+
+          </div>
+          <div class="col-sm-10">
+            <label class="col-form-label">Date Of Birth </label>
+            <input
+              class="form-control"
+              type="date"
+              name="dob"
+              formControlName="dob"
+              [ngClass]="!!(
+                PersonForm.controls.dob.invalid &&
+                !PersonForm.controls.dob.untouched
+                )
+                ? 'input-error'
+                : ''"
+              />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-4 col-md-12 col-sm-12 text-center">
+      <h3 class="text-muted text-center">Select Avatar</h3>
+
+      <div class="row center-Content">
+        <div class="col-6 p-1" *ngFor="let item of AvatarUrlList">
+          <img
+            class="img-coll"
+            (click)="SelectAvatar(item)"
+            [ngClass]="!!item.selected ? 'border border-success' : ''"
+            src="{{ item.url }}"
+            alt="avatar"
+            />
+        </div>
+        <div class="col-12">
+          <input
+            class="form-control"
+            type="text"
+            formControlName="avatar"
+            placeholder="avatar"
+            [ngClass]="!!(
+              PersonForm.controls.avatar.invalid &&
+              !PersonForm.controls.avatar.untouched
+              )
+              ? 'input-error'
+              : ''"
+            />
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 text-center">
+      <button type="submit" *ngIf="!Model.id" class="btn btn-primary">
+        Save
+      </button>
+      <button *ngIf="!!Model.id" class="btn btn-primary">Edit</button>
+    </div>
+
+  </div>
+</form>
+
+
+
+
+
+
+

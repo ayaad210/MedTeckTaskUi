@@ -1,0 +1,38 @@
+.navnbar-Segoe{
+  background-color:#563d7c;
+
+  position: fixed;
+  height: 10%;
+  width: 90%;
+  border-radius: 15px 50px;
+   left: 5%;
+   margin-top: 2%;
+   padding: 2%;
+   color: white;
+   z-index: 2;
+}
+.navnbar-Segoe .Nav-link{
+  background-color: #563d7c;
+  border-radius: 15px 50px;
+
+  color: white;
+  font-weight: bold;
+  padding: 10px;
+  font-family: Cursive;
+}
+.navnbar-Segoe .Nav-link:hover{
+  color: #563d7c;
+
+  background-color: white;
+  font-weight: bold;
+  padding: 10px;
+  font-family: Cursive;
+  border-radius: 15px 50px;
+}
+.pull-right{
+  right: 20px;
+  position: fixed;
+  top: 2%;
+z-index: 50;
+
+}

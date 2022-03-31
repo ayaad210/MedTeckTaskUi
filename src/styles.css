@@ -1,0 +1,23 @@
+/* You can add global styles to this file, and also import other style files */
+.is-invalid{
+    border: 1px solid red
+}
+
+.center-Content{
+    justify-content: center;
+}
+
+text-left{
+  text-align: left;
+}
+.btn-primary{
+color: white;
+background-color: #563d7c;
+}
+.btn-primary:hover{
+  color: #563d7c;
+  background-color: white;
+  }
+.main-text{
+  color: #563d7c;
+}

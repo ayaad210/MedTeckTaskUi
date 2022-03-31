@@ -1,0 +1,13 @@
+a.disabled {
+    pointer-events: none;
+}
+
+.card_img{
+  border-radius: 8px;
+width: 150px;
+margin: 10%;
+
+}
+
+
+

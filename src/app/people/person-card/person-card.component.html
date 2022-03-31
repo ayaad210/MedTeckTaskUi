@@ -1,0 +1,20 @@
+
+  <div class="card " style="align-items: center;">
+
+      <img class="card-img-top card_img " [src]="Model.avatar" alt="Person Avatar">
+
+    <div class="card-body text-left">
+      <h5 class="card-title "> <a  (click)="SelectPerson()">{{Model.name}}</a> </h5>
+      <hr>
+      <p class="card-text"><small class="text-muted">Emial:</small>
+        {{Model.email}}
+      </p>
+
+      <p class="card-text"><small class="text-muted">Country :</small>
+        {{Model.country}}
+      </p>
+      <p class="card-text"><small class="text-muted">Age :</small>
+        {{Model.dob|getAge}}
+      </p>
+
+  </div>
